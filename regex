@@ -1,0 +1,32 @@
+import re
+name=input("Enter your name: ")
+father_name=input("Enter you father's name: ")
+Dob=input("Enter your DOB: ")
+email=input("Enter your email: ")
+password=input("Enter your password: ")
+print("\n")
+
+if name in re.findall(r'[A-z ]+',name):
+    print(name)
+else:
+    print("incorrect name")
+    
+if father_name in re.findall(r'[A-z ]+',father_name):
+    print(father_name)
+else:
+    print("incorrect Father Name")
+    
+if Dob in re.findall(r'[\W\w\s]+',Dob):
+    print(Dob)
+else:
+    print("incorrect DOB")
+    
+if email in re.findall(r'[\w\W@.]+',email):
+    print(email)
+else:
+    print("incorrect email")
+    
+if password in re.findall(r'[\w ]+',password):
+    print(password)
+else:
+    print("incorrect password")
