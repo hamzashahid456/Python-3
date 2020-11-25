@@ -139,7 +139,7 @@ return false;
 }
 else if(cnic.length<=10)
 {
-alert("CNIC is short");
+alert("CNIC is too short");
 return false;
 }
 else if(cnic.length>11)
