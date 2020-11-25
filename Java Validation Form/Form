@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>  LOGIN FORM  </title>
+
+<style>
+input{
+color:black;
+font-family:"Times New Roman";
+border:2px solid brown;
+}
+</style>
+
+</head>
+<body style="background: url(https://www.technocrazed.com/wp-content/uploads/2015/12/Wood-Wallpaper-Background-21.jpg)">> 
+<h1 style="color:white;font-size:50px;" align="center">Form Validation in Java Script</h1>
+<h2 style="color:white" align="center";>
+<br>
+
+<form action="#" method="post" onsubmit="return val()">
+
+<p>Name     <input type="text" name="" size="60" id="name" ></p>
+<p>Father Name<input type="text" name="" size="60" id="fathername"></p>
+<p>Gender:
+<select size="1" name="">
+<option> Male </option>
+<option> Female </option></select></p>
+<p>DOB
+<select size="1" name="" >
+<option>01</option>
+<option>02</option>
+<option>03</option>
+<option>04</option>
+<option>05</option>
+<option>06</option>
+<option>07</option>
+<option>08</option>
+<option>09</option>
+<option>10</option>
+<option>11</option>
+<option>12</option>
+<option>13</option>
+<option>14</option>
+<option>15</option>
+<option>16</option>
+<option>17</option>
+<option>18</option>
+<option>19</option>
+<option>20</option>
+<option>21</option>
+<option>22</option>
+<option>23</option>
+<option>24</option>
+<option>25</option>
+<option>26</option>
+<option>27</option>
+<option>28</option>
+<option>29</option>
+<option>30</option>
+<option>31</option>
+</select>
+
+
+<select size="1" name="">
+<option>January</option>
+<option>February</option>
+<option>March</option>
+<option>April</option>
+<option>May</option>
+<option>June</option>
+<option>July</option>
+<option>August</option>
+<option>September</option>
+<option>October</option>
+<option>November</option>
+<option>December</option></select>
+
+<select size="1" name="" >
+<option>1995</option>
+<option>1996</option>
+<option>1997</option>
+<option>1998</option>
+<option>1999</option>
+<option>2001</option>
+<option>2002</option>
+<option>2003</option>
+<option>2004</option>
+<option>2005</option>
+<option>2006</option>
+<option>2007</option>
+<option>2008</option>
+<option>2009</option>
+<option>2010</option>
+<option>2011</option>
+<option>2012</option>
+<option>2013</option>
+<option>2014</option>
+<option>2015</option>
+<option>2016</option>
+<option>2017</option>
+<option>2018</option>
+<option>2019</option>
+<option>2020</option>
+</select></p>
+
+
+<p>Hobby    <input type="text" name="" size="60" id="hobby"></p>
+<p>Skills   <input type="text" name="" size="60" id="skills"></p>
+<p>Education<input type="text" name="" size="60" id="education"></p>
+<p>CNIC     <input type="number" name="" size="60" id="cnic"></p>
+<input type="submit" name="submit" value="Submit">
+</h2>
+</form>
+
+<script type="text/javascript">
+function val()
+{
+var name=document.getElementById("name").value;
+var fathername=document.getElementById("fathername").value;
+var hobby=document.getElementById("hobby").value;
+var skills=document.getElementById("skills").value;
+var education=document.getElementById("education").value;
+var cnic=document.getElementById("cnic").value;
+if(name=="" || fathername=="" || hobby=="" || skills=="" || education=="" || cnic=="")
+{
+alert("All Fields Required");
+return false;
+}
+else if(name.length<4)
+{
+alert("Name must be atleast 4 letters");
+return false;
+}
+
+else if(fathername.length<4)
+{
+alert("Father Name must be atleast 4 letters");
+return false;
+}
+else if(cnic.length<=10)
+{
+alert("CNIC is short");
+return false;
+}
+else if(cnic.length>11)
+{
+alert("Cnic is too long");
+return false;
+}
+else
+{
+return true;
+}
+
+}
+</script>
+
+
+</body>
+</html>
