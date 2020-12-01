@@ -1,0 +1,54 @@
+def chocolatePrice(ali_budget,bashir_budget):
+    onechoco=GCD(ali_budget,bashir_budget) 
+    #GCD stands for Greatest Common Divisor
+    return onechoco
+
+        
+def GCD(x,y):
+    if(y==0):
+        return x
+    else:
+        return GCD(y,x%y)
+
+    
+def calculateProfit(ali_budget,bashir_budget):
+    if((ali_budget)==0 or (bashir_budget)==0):
+        return("Not Possible")    
+    if(type(ali_budget)==str or type(bashir_budget)==str):
+        return("Not Possible")    
+
+    if(type(ali_budget)==float or type(bashir_budget)==float):
+        ali=round(ali_budget)
+        bashir=round(bashir_budget)
+        price=chocolatePrice(ali,bashir)
+        ali_chocolates=ali/price
+        bashir_chocolates=bashir/price
+        if(ali_chocolates<bashir_chocolates):
+            ali_profit=price*2*ali_chocolates
+            bashir_profit=price*1.5*bashir_chocolates
+        else:
+            ali_profit=price*1.5*ali_chocolates
+            bashir_profit=price*2*bashir_chocolates
+        if(ali_profit>bashir_profit):
+            return ali_profit
+        else:
+            return bashir_profit
+            
+    
+        
+    elif(type(ali_budget)==int and type(bashir_budget)==int):
+        price=chocolatePrice(ali_budget,bashir_budget)
+        ali_chocolates=ali_budget/price
+        bashir_chocolates=bashir_budget/price
+        if(ali_chocolates<bashir_chocolates):
+            ali_profit=price*2*ali_chocolates
+            bashir_profit=price*1.5*bashir_chocolates
+        else:
+            ali_profit=price*1.5*ali_chocolates
+            bashir_profit=price*2*bashir_chocolates
+        if(ali_profit>bashir_profit):
+            return ali_profit
+        else:
+            return bashir_profit
+    else:
+        return ("Not Possible")
