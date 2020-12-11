@@ -1,0 +1,13 @@
+def openLocks(number_of_lockers, number_of_students):
+    locker=0
+    openlock=[]
+    for student in range(1,number_of_students+1):
+        for lock in range(1,number_of_lockers+1):
+            if lock%student==0:
+                if not lock in openlock:
+                    openlock.append(lock)
+                    locker=locker+1
+                elif lock in openlock:
+                    openlock.remove(lock)
+                    locker=locker-1
+    return locker
